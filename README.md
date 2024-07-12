@@ -4,19 +4,15 @@ This repository is a sample for how to perform signing and verification of arbit
 
 ## Prerequisites
 
-Before running this program, you must have the following environment variables declared using [PowerShell](https://docs.microsoft.com/en-us/powershell/#powershell-editions---tools):
+Before running this program, you must have a certificate set up in Azure keyvault and the following environment variables declared in .env file
 
-```PowerShell
-# https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
-$Env:AZURE_TENANT_ID="your-azure-tenant-id"
-# https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps
-$Env:AZURE_CLIENT_ID="your-azure-client-id"
-$Env:AZURE_CLIENT_SECRET="your-client-secret-associated-with-azure-client-id"
 ```
+KEYVAULT_URI="your-keyvault-url"
+AZURE_TENANT_ID="your-azure-tenant-id"
+AZURE_CLIENT_ID="your-azure-client-id"
+AZURE_CLIENT_SECRET="your-client-secret-associated-with-azure-client-id"
+AZURE_CERT_NAME="your-pdf-cert-name"
 
-And add your [PDFNet License Key](https://www.pdftron.com/download-center/windows/) to the file `.pdfnetlicensekey`
 
-```sh
-mv empty.pdfnetlicensekey .pdfnetlicensekey
-# Add license key to .pdfnetlicensekey
+PDFNET_LICENSE_KEY="YOUR LICENSE KEY"
 ```
